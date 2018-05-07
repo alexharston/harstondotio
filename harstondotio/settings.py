@@ -26,7 +26,7 @@ from .secrets import SECRET_KEY, BASE_DIR, DATABASES
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'harston.io']
+ALLOWED_HOSTS = ['127.0.0.1', 'www.harston.io','harston.io']
 
 
 # Application definition
