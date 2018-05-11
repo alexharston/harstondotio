@@ -5,6 +5,7 @@
 
         <link rel="icon" type="image/ico" href="/static/images/favicon.ico">
         <link rel="apple-touch-icon" type="image/png" href="/static/images/512ico.png" sizes="96x96">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Bootstrap core CSS -->
@@ -70,17 +71,11 @@
     </nav>
 
 </header>
-
-
             
-        <div class="content container-fluid">
+        <div class="container-fluid">
             <!-- {% include "blog/aboutsummary.html" %} -->
-            <div class="row">
-                <div class="col-md-8 text-center">
                     {% block content %}
                     {% endblock %}
-                </div>
-            </div>
         </div>
     </body>
 </html>
