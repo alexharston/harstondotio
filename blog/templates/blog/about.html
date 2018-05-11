@@ -1,14 +1,22 @@
 {% extends 'blog/base.html' %}
 
 {% block content %} 
-    <div class="col-md-8">
+    <div class="container-fluid">
         <h1>
         About
         </h1>
-        <p>I'm Alex Harston, a first-year PhD Student in the Brain and Behaviour Lab at Imperial College London. I previously did Systems Neuroscience in Edinburgh, working in volitional motor control in mice. I currently work in the area of action intention prediction, using neural networks and other machine learning methods for multivariate time-series modelling. My interests include infosec, web development, espresso and data visualisation.</p>
+        <p>I'm Alex, a first-year PhD Student in the Brain and Behaviour Lab at Imperial College London. I previously did Systems Neuroscience in Edinburgh, working in volitional motor control in mice. I've gone more computational (and more human-focused) recently, and currently work in the area of action intention prediction, using neural networks and other machine learning methods for multivariate time-series analysis. My other interests include information security, web development, design, and learning to make the perfect espresso.</p>
     </div>
-    <div class="col-lg-6 col-md-4">
-        <a href="mailto:alex@harston.io">alex@harston.io</a>
-        <a href="https://twitter.com/alexharston">Twitter</a>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <a href="mailto:alex@harston.io">alex@harston.io</a>
+            </div>
+            <div class="col-6"> 
+                <a href="https://www.twitter.com/alexharston">@alexharston</a>
+            </div>
+        </div>
     </div>
+
 {% endblock %}
