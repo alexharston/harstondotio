@@ -49,3 +49,6 @@ def about(request):
 
 def projects(request):
     return render(request, 'blog/projects.html')
+
+def research(request):
+    return render(request, 'blog/research.html')
