@@ -15,4 +15,24 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+class Paper(models.Model):
+    title = models.CharField(max_length=300)
+    authors = models.TextField()
+    published_year = models.DateField(blank=True, null=True)
+    abstract = models.TextField()
+    url = models.TextField()
+    doi = models.TextField()
+    bodytext = models.TextField()
+    figure = MediaFile.
+
+class Poster(models.Model):
+    author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    title = models.CharField(max_length=200)
+    text = models.TextField()
+    published_year = models.DateField(blank=True, null=True)
+    figures = MediaFile.objects
+
+class Project(models.Model):
+    title = models.TextField()
+    background = models.TextField()
     
