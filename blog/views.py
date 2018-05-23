@@ -46,9 +46,11 @@ def post_edit(request, pk):
 def about(request):
     return render(request, 'blog/about.html')
 
-
 def projects(request):
     return render(request, 'blog/projects.html')
 
 def research(request):
     return render(request, 'blog/research.html')
+
+def designs(request):
+    return render(request, 'blog/designs.html')
