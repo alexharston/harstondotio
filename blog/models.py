@@ -29,9 +29,10 @@ class Poster(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
     published_year = models.DateField(blank=True, null=True)
-    figures = MediaFile.objects
+    figures = models.ImageField()
 
 
 class Project(models.Model):
     title = models.TextField()
     background = models.TextField()
+    text = models.TextField()

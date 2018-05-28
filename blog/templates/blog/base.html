@@ -1,8 +1,8 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>harston.io</title>
+   <head>
+        <title>harston.io | {% block title %}{% endblock %}</title>
 
         <link rel="icon" type="image/ico" href="/static/images/favicon.ico">
         <link rel="apple-touch-icon" type="image/png" href="/static/images/512ico.png" sizes="96x96">
@@ -25,12 +25,10 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
 
-    <body>
-
+<body>
 
 <!--Main Navigation-->
 <header>
-
     <nav class="navbar navbar-expand-lg navbar-dark default-color">
         <a class="navbar-brand" href="/">
             <strong>harston.</strong>
@@ -76,31 +74,12 @@
             {% endif %}
         </div>
     </nav>
-
 </header>
-<br>
-<br>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card card-cascade-wider">
-                        <img class="card-img-top" src="/static/images/alexsmaller.png">
-                        <h5 class="card-title text-center">Alex Harston</h5>
-                        <div class="card-body">
-                            <p>I'm Alex, a first-year PhD Student in the Brain and Behaviour Lab at Imperial College London. I work in the area of action
-                                intention prediction, using neural networks and other machine learning methods for multivariate time-series modelling.
-                                My interests include infosec, web development, and data.</p>
-                        </div>
-                    </div>
-                
-                </div>
-                <div class="col-md-8">
-                    {% block content %} {% endblock %}
-                </div>
-            </div>
-        </div>
-        </div>
 
+<div class="container-fluid">
+ {%block content%}
+ {% endblock %}
+</div>
 
-    </body>
+</body>
 </html>

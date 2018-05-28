@@ -1,9 +1,18 @@
-{% extends 'blog/base.html' %} 
+{% extends 'blog/base.html' %}
 
-{% block research %}
-<div class="container-fluid text-center">
-    <h1>Research</h1>
-    <br>
+{% block title %}
+Research
+{% endblock %}
+
+{% block content %}
+<div class="page-container">
+    <div class="container">
+        <div>
+            <h1>Research</h1>
+        </div>
+    </div>
+
+    <div class="container">
         <ul>
             <h3>
                 <a href="https://arxiv.org/abs/1803.05419" target="_blank">Generalised Structural CNNs (SCNNs) for time series data with arbitrary graph topology</a>
@@ -16,5 +25,6 @@
             </h3>
             <p>C Auepanwiriyakul, <strong>JA Harston</strong>, P Orlov, A Shafti & AA Faisal (2018)</p>
         </ul>
+    </div>
 </div>
 {% endblock %}

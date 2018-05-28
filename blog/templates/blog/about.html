@@ -1,27 +1,38 @@
 {% extends 'blog/base.html' %}
 
-{% block about %} 
-    <div class="container text-center">
-        <div class="row">
-            <div class="col col-lg-12">
-                <h1>
-                About
-                </h1>
-                <p>I'm Alex, a first-year PhD Student in the Brain and Behaviour Lab at Imperial College London. I previously did Systems Neuroscience in Edinburgh, working on understanding volitional motor control in mice. I've gone more computational (and human-focused) recently, and currently work in the area of action intention prediction, using deep convolutional neural networks, LSTMs and autoregressive models for multivariate time-series analysis. My other interests include information security, web development, design, and learning to make the perfect espresso.</p>
-            </div>
-        </div>
-    </div>
-                
+{% block title %}
+About
+{% endblock %}
 
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-lg-6">
-                <a href="mailto:alex@harston.io">alex@harston.io</a>
-            </div>
-            <div class="col-lg-6"> 
-                <a href="https://twitter.com/alexharston">@alexharston</a>
-            </div>
+{% block content %}
+
+<div class="container text-center" style="padding: 50px;">
+
+    <div class="card">
+      <img class="card-img-top" src="/static/images/alexsmaller.png">
+      <div class="card-body">
+          <h5>I'm Alex, a first-year PhD Student in the Brain and Behaviour Lab at Imperial College London.</h5>
+      </div>
+    </div>
+
+    <div class="container card">
+    <h1>About</h1>
+      <p>I previously did Systems Neuroscience in Edinburgh, working on understanding volitional motor control in mice. I've gone
+      more computational (and human-focused) recently, and currently work in the area of action intention prediction, using deep
+      convolutional neural networks, LSTMs and autoregressive models for multivariate time-series analysis. My other interests
+      include information security, web development, design, and learning to make the perfect espresso.</p>
+    </div>
+</div>
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col-lg-6">
+            <a href="mailto:alex@harston.io">alex@harston.io</a>
+        </div>
+        <div class="col-lg-6">
+            <a href="https://twitter.com/alexharston">@alexharston</a>
         </div>
     </div>
+</div>
 
 {% endblock %}

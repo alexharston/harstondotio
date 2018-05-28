@@ -1,19 +1,56 @@
-{% extends 'blog/base.html' %} 
+{% extends 'blog/base.html' %}
 
-{% block projects %}
-<div class="container-fluid text-center">
-    <h1>Projects</h1>
-    <div class="row">
-        <div class="col-lg-6">
-            <h2><a href="https://github.com/alexharston/PubBrawl" target="_blank">PubBrawl</a></h2>
-            <p>PubBrawl is a probabilistic pub crawl generator for London, planning the optimal route based off London crime data, distance, pub quality and more.</p>
-        </div>
-        <div class="col-lg-6">
-            <h2>
-                <a href="https://github.com/alexharston/harstondotio" target="_blank">harston.io</a>
-            </h2>
-            <p>The source code for this site (under constant development)</p>
-        </div>
+{% block title %}
+Projects
+{% endblock %}
+
+{% block content %}
+<div class="page-container">
+<h1 style="margin-bottom:35px">Projects</h1>
+    <div class="container grid">
+
+        <div class="container">
+        <a href="https://github.com/alexharston/PubBrawl" target="_blank">
+            <div class="card">
+                <div class="card-title">
+                    <h2>PubBrawl</h2>
+                </div>
+
+                <div class="card-body">
+                <p>PubBrawl is a probabilistic pub crawl generator for London, planning the optimal route
+                  based off London crime data, distance, pub quality and more.</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="container">
+        <a href="https://github.com/alexharston/harstondotio" target="_blank">
+            <div class="card">
+                <div class="card-title">
+                <h2>harston.io</h2>
+                </div>
+
+                <div class="card-body">
+                <p>The source code for this site (under constant development)</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="container">
+        <a href="https://github.com/alexharston/harstondotio" target="_blank">
+            <div class="card">
+                <div class="card-title">
+                <h2><a href="https://github.com/alexharston/locomouseion" target="_blank">Locomouseion</h2>
+                </div>
+
+                <div class="card-body">
+                <p>A program utilising OpenCV to enable manual tagging of mouse locomotion.</p>
+                </div>
+            </div>
+        </a>
+    </div>
     </div>
 </div>
 {% endblock %}
