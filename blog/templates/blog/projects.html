@@ -5,51 +5,69 @@ Projects
 {% endblock %}
 
 {% block content %}
-<h1>Projects</h1>
+<h1 class="text-center">Projects</h1>
 <div class="container">
-    <div class="card-deck">
+    <div class="row">
+        <div class="card-deck">
+            <a href="https://github.com/alexharston/PubBrawl" class="col-lg-4" target="_blank">
+                <div class="card mb-4">
 
-        <a href="https://github.com/alexharston/PubBrawl" target="_blank">
-            <div class="card mb-4">
-                <div class="card-body">
+                    <div class="view overlay">
+                        <img class="card-img-top" src="/static/images/logo_smallest.png" alt="PubBrawl">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
 
-                    <h2 class="card-title">PubBrawl</h2>
-
-                    <p class="card-text">
-                    PubBrawl is a probabilistic pub crawl generator for London,
-                    planning the optimal route based off London crime data,
-                    distance, pub quality and more.
-                    </p>
-
+                    <div class="card-body">
+                        <h2 class="card-title">PubBrawl</h2>
+                        <p class="card-text">
+                        PubBrawl is a probabilistic pub crawl generator for London,
+                        planning the optimal route based off London crime data,
+                        distance, pub quality and more.
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
 
-        <a href="https://github.com/alexharston/harstondotio" target="_blank">
-            <div class="card mb-4">
-                <div class="card-body">
+            <a href="https://github.com/alexharston/harstondotio" class="col-lg-4" target="_blank">
+                <div class="card mb-4">
 
-                    <h2 class="card-title">harston.io</h2>
+                    <div class="view overlay">
+                        <img class="card-img-top" src="/static/images/logo_smallest.png" alt="PubBrawl">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
 
-                    <p class="card-text">
-                    The source code for this site (under constant development)</p>
-                    </p>
+                    <div class="card-body">
+                        <h2 class="card-title">harston.io</h2>
+                        <p class="card-text">
+                        The source code for this site (under constant development)</p>
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
 
-        <a href="https://github.com/alexharston/harstondotio" target="_blank">
-            <div class="card mb-4">
-                <div class="card-body">
+            <a href="https://github.com/alexharston/locomouseion" class="col-lg-4" target="_blank">
+                <div class="card mb-4">
 
-                    <h2 class="card-title">Locomouseion</h2>
+                    <div class="view overlay">
+                        <img class="card-img-top" src="/static/images/mouse.png" alt="Locomouseion">
+                        <a href="#!">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
 
-                    <p class="card-text">
-                    A program utilising OpenCV to enable manual tagging of mouse locomotion.
-                    </p>
+                    <div class="card-body">
+                        <h2 class="card-title">Locomouseion</h2>
+                        <p class="card-text">
+                        A program utilising OpenCV to enable manual tagging of mouse locomotion.
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
+        </div>
     </div>
 </div>
 {% endblock %}
