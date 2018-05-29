@@ -46,32 +46,6 @@ h1, h2, h3, h4 {
     color: #6C7A89;
 }
 
-.container{
-  display: flex;
-  justify-content: center;
-  align-items: top;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-
-}
-
-.page-container{
-  padding-top: 50px;
-  text-align: center;
-
-}
-
-.card-title{
-    padding-top: 20px;
-}
-
-.card{
-    margin-left: 20px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-
 .grid{
   display: grid;
 }
