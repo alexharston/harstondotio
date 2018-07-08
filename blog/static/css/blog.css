@@ -76,6 +76,12 @@ h1, h2, h3, h4 {
   display: grid;
 }
 
+nav {
+    display: flex;             /* establish flex container */
+    align-items: center;       /* center ul container vertically */
+    justify-content: center;   /* center ul container horizontally (optional) */
+}
+
 @media (min-width: 600px){
   .grid{
     grid-template-columns: 1fr 1fr;
