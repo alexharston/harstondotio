@@ -17,6 +17,16 @@ class Post(models.Model):
 
 
 class Paper(models.Model):
+    """
+    Paper 
+    
+    [A model for publications]
+    
+    :param models: [description]
+    :type models: [type]
+    """
+
+
     title = models.CharField(max_length=300)
     authors = models.TextField()
     published_date = models.IntegerField()

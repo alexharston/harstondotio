@@ -57,6 +57,3 @@ def research(request):
 
 def designs(request):
     return render(request, 'blog/designs.html')
-
-def pay(request):
-    return render(request, 'blog/pay.html')
