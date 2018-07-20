@@ -1,7 +1,10 @@
+
+
 .page-header {
     background-color: #19B5FE;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
+    background-color: aquamarine;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
@@ -9,6 +12,7 @@
     font-size: 36pt;
     text-decoration: none;
     font-family: 'Lato', sans-serif;
+    background-color: #F7CA18;
 }
 
 .content {
