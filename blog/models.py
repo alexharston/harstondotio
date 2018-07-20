@@ -15,7 +15,6 @@ class Post(models.Model):
         self.published_date = timezone.now()
         self.save()
 
-    
 
 class Paper(models.Model):
     title = models.CharField(max_length=300)
