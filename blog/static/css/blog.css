@@ -59,7 +59,7 @@ nav {
     align-items: center;       /* center ul container vertically */
     justify-content: center;   /* center ul container horizontally (optional) */
 }
-
+/* 
 @media (min-width: 600px){
   .grid{
     grid-template-columns: 1fr 1fr;
@@ -70,4 +70,4 @@ nav {
   .grid{
     grid-template-columns: 1fr 1fr 1fr;
   }
-}
+} */

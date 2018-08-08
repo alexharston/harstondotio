@@ -5,13 +5,13 @@ Posts
 {% endblock %}
 
 {% block content %}
-    <div class="tile">
-        <h1>Posts</h1>
-    </div>
+<section class="container">
+    <h1 class="title">Posts</h1>
+  
 
-    <div class="tile">
+    <div class="content">
         {% for post in posts %}
-            <div class="tile">
+            <div>
                 <h1>
                     <a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a>
                 </h1>
@@ -19,4 +19,5 @@ Posts
             </div>
         {% endfor %}
     </div>
+</section>
 {% endblock %}

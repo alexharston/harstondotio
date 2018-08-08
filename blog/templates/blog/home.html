@@ -6,4 +6,39 @@ Home
 
 
 {%block content%}
+<br>
+
+<div class="container">
+    <div class="tile is-ancestor">
+        <div class="tile is-vertical is-4">
+            <div class="tile">
+                <div class="tile is-parent is-vertical">
+                    <article class="tile is-child notification is-warning">
+                        <p class="title">get in touch</p>
+                    <p class="subtitle"><a href="mailto:alex@harston.io">alex@harston.io</a></p>
+                    <p class="subtitle"><a href="https://twitter.com/alexharston"> @alexharston</a></p>
+                    </article>
+                </div>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child notification is-danger">
+                    <p class="title">For science questions</p>
+                    <p class="subtitle"><a href="mailto:j.harston17@imperial.ac.uk">j.harston17@imperial.ac.uk</a></p>
+                </article>
+            </div>
+        </div>
+        <div class="tile is-parent">
+            <article class="tile is-child notification is-success">
+                <div class="content">
+                    <p class="title">About me</p>
+                    <figure class="image">
+                        <img src="static/images/alexsmaller.png"
+                    </figure>
+                    <p class="content">I previously did Systems Neuroscience in Edinburgh, working on understanding volitional motor control in mice. I've gone more computational recently, and currently work in the area of human action intention prediction, using deep convolutional neural networks, LSTMs and autoregressive models for multivariate time-series analysis.</p>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
