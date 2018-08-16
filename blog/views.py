@@ -60,3 +60,6 @@ def designs(request):
 
 def pay(request):
     return render(request, 'blog/pay.html')
+
+def cv(request):
+    return render(request, 'blog/cv.html')
