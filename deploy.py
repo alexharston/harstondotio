@@ -29,17 +29,17 @@ for file_ in tracked_files:
 
 # Turn off Debug
 subprocess.call(
- "ssh alex@{} 'sed -i s/\"DEBUG = True\"/\"DEBUG = False\"/g ~/{}/source/harstondotio/settings.py'".format(sitename, sitename),
+ "ssh alex@{} 'sed -i s/\"DEBUG = True\"/\"DEBUG = False\"/g ~/{}/source/core/settings.py'".format(sitename, sitename),
  shell=True
 )
 
 # Add allowed hosts
 subprocess.call(
- "ssh alex@{} 'sed -i s/\"ALLOWED_HOSTS = \[\]\"/\"ALLOWED_HOSTS = \[£'{}£', £'www.{}£'\]\"/g ~/{}/source/harstondotio/settings.py'".format(sitename, sitename, sitename, sitename),
+ "ssh alex@{} 'sed -i s/\"ALLOWED_HOSTS = \[\]\"/\"ALLOWED_HOSTS = \[£'{}£', £'www.{}£'\]\"/g ~/{}/source/core/settings.py'".format(sitename, sitename, sitename, sitename),
  shell=True
 )
 subprocess.call(
- "ssh alex@{} 'sed -i s/£/\\\"/g ~/{}/source/harstondotio/settings.py'".format(sitename, sitename),
+ "ssh alex@{} 'sed -i s/£/\\\"/g ~/{}/source/core/settings.py'".format(sitename, sitename),
  shell=True
 )
 
@@ -52,13 +52,13 @@ subprocess.call(
 
 # Upload the secret settings
 subprocess.call(
- "scp -r ./harstondotio/secrets.py alex@{}:~/{}/source/harstondotio/secrets.py".format(sitename, sitename), shell=True
+ "scp -r ./core/secrets.py alex@{}:~/{}/source/core/secrets.py".format(sitename, sitename), shell=True
 )
 
 # Switch to postgres database remotely
 
 subprocess.call(
-    "ssh alex@{} 'sed -i s/\"= local\"/\"= live\"/g ~/{}/source/harstondotio/secrets.py'".format(sitename, sitename),
+    "ssh alex@{} 'sed -i s/\"= local\"/\"= live\"/g ~/{}/source/core/secrets.py'".format(sitename, sitename),
     shell=True
 )
 

@@ -12,6 +12,5 @@ urlpatterns = [
     path("posts/", views.post_list, name="post_list"),
     path("research/", views.research, name="research"),
     path("designs/", views.designs, name="designs"),
-    path("pay/", views.pay, name="pay"),
     path("cv/", views.cv, name="cv"),
 ]
