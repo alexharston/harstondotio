@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
-from .models import Post
+from .models import Post, Paper, Poster, Project, Design
 from .forms import PostForm
 
 
@@ -20,6 +20,12 @@ def post_new(request):
         form = PostForm()
     return render(request, 'post_edit.html', {'form': form})
 
+#if not logged in
+def post_detail(request, id):
+    post = get_object_or_404(Post, id=id)
+    return render(request, 'post_detail.html', {'post': post})
+
+#if authenticated
 @login_required
 def post_edit(request, id):
     post = get_object_or_404(Post, id=id)
@@ -43,21 +49,21 @@ def post_list(request):
     'published_date').reverse()
     return render(request, 'post_list.html', {'posts': posts})
 
-def post_detail(request, id):
-    post = get_object_or_404(Post, id=id)
-    return render(request, 'post_detail.html', {'post': post})
 
 def about(request):
     return render(request, 'about.html')
 
 def projects(request):
-    return render(request, 'projects.html')
+    projects = Project.objects.all()
+    return render(request, 'projects.html', {'projects': projects})
 
 def research(request):
-    return render(request, 'research.html')
+    papers = Paper.objects.all()
+    return render(request, 'research.html', {'papers': papers})
 
 def designs(request):
-    return render(request, 'designs.html')
+    designs = Design.objects.all()
+    return render(request, 'designs.html', {'designs': designs})
 
 def pay(request):
     return render(request, 'pay.html')

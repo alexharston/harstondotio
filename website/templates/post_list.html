@@ -13,7 +13,7 @@ Posts
         {% for post in posts %}
             <div>
                 <h1>
-                    <a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a>
+                    <a href="{% url 'post_detail' id=post.id %}">{{post.title}}</a>
                 </h1>
                 <p> {{ post.text|truncatewords:40 }} </p>
             </div>
