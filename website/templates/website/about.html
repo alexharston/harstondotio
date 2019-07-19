@@ -1,0 +1,32 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block title %}
+About
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="columns">
+        <!-- <div class="column">
+            <img src="/static/images/alexsmaller.png">
+            <h5>I'm Alex, a first-year PhD Student in the Brain and Behaviour Lab at Imperial College London.</h5>
+        </div> -->
+        <div class="column">
+            <a href="mailto:alex@harston.io">alex@harston.io</a>
+        </div>
+        <div class="column">
+            <a href="https://twitter.com/alexharston">@alexharston</a>
+        </div>
+        <div class="column">
+            <h5>I previously did Systems Neuroscience in Edinburgh, working on understanding volitional motor control in mice.
+                I've gone more computational (and human-focused) recently, and currently work in the area of action intention
+                prediction, using deep convolutional neural networks, LSTMs and autoregressive models for multivariate time-series
+                analysis.</h5>
+        </div>
+        <!-- My other interests
+            include information security, web development, design, and learning to make the perfect espresso.</h5> -->
+
+    </div>
+
+</div>
+{% endblock %}
