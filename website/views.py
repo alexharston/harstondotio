@@ -18,7 +18,7 @@ def post_new(request):
             return redirect('post_detail', id=post.id)
     else:
         form = PostForm()
-    return render(request, 'website/post_edit.html', {'form': form})
+    return render(request, 'post_edit.html', {'form': form})
 
 @login_required
 def post_edit(request, id):
@@ -33,34 +33,34 @@ def post_edit(request, id):
             return redirect('post_detail', id=post.id)
     else:
         form = PostForm(instance=post)
-    return render(request, 'website/post_edit.html', {'form': form})
+    return render(request, 'post_edit.html', {'form': form})
 
 def home(request):
-    return render(request, 'website/home.html')
+    return render(request, 'home.html')
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by(
     'published_date').reverse()
-    return render(request, 'website/post_list.html', {'posts': posts})
+    return render(request, 'post_list.html', {'posts': posts})
 
 def post_detail(request, id):
     post = get_object_or_404(Post, id=id)
-    return render(request, 'website/post_detail.html', {'post': post})
+    return render(request, 'post_detail.html', {'post': post})
 
 def about(request):
-    return render(request, 'website/about.html')
+    return render(request, 'about.html')
 
 def projects(request):
-    return render(request, 'website/projects.html')
+    return render(request, 'projects.html')
 
 def research(request):
-    return render(request, 'website/research.html')
+    return render(request, 'research.html')
 
 def designs(request):
-    return render(request, 'website/designs.html')
+    return render(request, 'designs.html')
 
 def pay(request):
-    return render(request, 'website/pay.html')
+    return render(request, 'pay.html')
 
 def cv(request):
-    return render(request, 'website/cv.html')
+    return render(request, 'cv.html')
