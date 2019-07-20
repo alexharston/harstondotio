@@ -4,50 +4,18 @@
 Projects
 {% endblock %}
 
+
+
 {% block content %}
-<div class="columns">
-    <div class="column">
-        <a href="https://github.com/alexharston/PubBrawl" target="_blank"></a>
-        <div>
-            <h2 class="subtitle">PubBrawl</h2>
-            <p class="content">
-            PubBrawl is a probabilistic pub crawl generator for London,
-            planning the optimal route based off London crime data,
-            distance, pub quality and more.
-            </p>
-        </div>
+    <section class="section">
+    <h1 class="title has-text-centered">Projects</h1>
+    <div class="grid-container">
+        {% for project in projects %}
+            <div class="grid-item">
+                <a href="{{project.link}}" target="_blank">{{project.title}}</a>
+                <p class="content">{{project.text}}</p>
+            </div>
+        {% endfor %}
     </div>
-    <div class="column">
-        <a href="https://github.com/alexharston/harstondotio" target="_blank">
-        </a>
-        <div>
-            <h2 class="subtitle">harston.io</h2>
-            <p class="content">
-            The source code for this site (under constant development)</p>
-            </p>
-        </div>
-    </div>
-     
-
-    <div class="column">
-        <a href="https://github.com/alexharston/locomouseion" class="col-lg-4" target="_blank"></a>
-            <h2 class="subtitle">Locomouseion</h2>
-                <p class="content">A program utilising OpenCV to enable manual tagging of mouse locomotion.</p>
-    </div>    
-
-
-    <div class="column">   
-        <a href="https://github.com/duguidlab/MouseBehaviourTracking" class="col-lg-4" target="_blank"></a>
-            <h2 class="subtitle">MouseBehaviourTracking</h2>
-            <p class="content">A Kivy program (previously Java) for programmatic rodent behavioural assays.</p>
-    </div>
-
-    <div class="column">
-        <a href="https://github.com/alexharston/pypelearn" class="col-lg-4" target="_blank"></a>
-            <h2 class="subtitle">pypelearn</h2>
-            <p class="content">A Python library for time series data.</p>
-    </div>
-</div>
-
-
+</section>
 {% endblock %}

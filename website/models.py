@@ -30,7 +30,6 @@ class Paper(models.Model):
         return self.title
 
 
-
 class Poster(models.Model):
 
     title = models.CharField(max_length=200)
@@ -47,7 +46,6 @@ class Project(models.Model):
 
     title = models.CharField(max_length=200)
     text = models.TextField(blank=True)
-    published_year = models.DateField(blank=True, null=True)
     image = models.ImageField(blank=True)
     link = models.URLField(default="")
 
