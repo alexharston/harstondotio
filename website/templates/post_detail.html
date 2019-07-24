@@ -1,24 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="tile">
-        <div class="tile">
-        <h1>{{ post.title }}</h1>
-        </div>
-
+<section class="section">
+        <h1 class="title has-text-centered">{{ post.title }}</h1>
         {% if post.published_date %}
-        <div class="tile">
-            {{ post.published_date }}
-        </div>
+            <div class="container">
+                <p class="content has-text-centered">{{ post.published_date }}</p>
+            </div>
         {% endif %}
         {% if user.is_authenticated %}
-        <a class="btn btn-default" href="{% url 'post_edit' id=post.id %}">
-            <span class="glyphicon glyphicon-pencil"></span>
-        </a>
+            <a class="btn btn-default" href="{% url 'post_edit' id=post.id %}">
+                <span class="glyphicon glyphicon-pencil"></span>
+            </a>
         {% endif %}
-
-        <div class="tile">
-        <p>{{ post.text|linebreaksbr }}</p>
-        </div>
-    </div>
+        <p class="content">{{ post.text|linebreaksbr }}</p>
+    </section>
 {% endblock %}

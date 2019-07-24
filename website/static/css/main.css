@@ -6588,4 +6588,8 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr; }
+
 /*# sourceMappingURL=main.css.map */

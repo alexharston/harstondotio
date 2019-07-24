@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
-from .models import Post, Paper, Poster, Project, Design
+from .models import Post, Paper, Poster, Project, Design, ReadPosts
 from .forms import PostForm
 
 
@@ -45,10 +45,8 @@ def home(request):
     return render(request, 'home.html')
 
 def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by(
-    'published_date').reverse()
+    posts = Post.objects.all().order_by('-published_date')
     return render(request, 'post_list.html', {'posts': posts})
-
 
 def about(request):
     return render(request, 'about.html')
@@ -65,8 +63,8 @@ def designs(request):
     designs = Design.objects.all()
     return render(request, 'designs.html', {'designs': designs})
 
-def pay(request):
-    return render(request, 'pay.html')
+def readinglist(request):
+    readinglist = ReadPosts.objects.all().order_by('-date_added')
 
 def cv(request):
     return render(request, 'cv.html')

@@ -41,7 +41,6 @@ class Poster(models.Model):
         return self.title
 
 
-
 class Project(models.Model):
 
     title = models.CharField(max_length=200)
@@ -58,7 +57,17 @@ class Design(models.Model):
     text = models.TextField(blank=True)
     published_year = models.DateField(blank=True, null=True)
     image = models.ImageField(blank=True)
-   
     
+    def __str__(self):
+        return self.title
+
+
+class ReadPosts(models.Model):
+
+    title = models.TextField(max_length=500)
+    link = models.URLField(default="")
+    comment = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+
     def __str__(self):
         return self.title
