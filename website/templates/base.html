@@ -12,43 +12,29 @@
         <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
     </head>
 
+<header>
+    <nav>
+        <h1 class="title"><strong>harston.</strong></h1>
+        <h3 class="subtitle">PhD Student at Imperial. ML and Neuroscience.</h3>
+        <a href="/">
+        <ul>
+            <li class="navbar-item"><a href="/posts"><i class="fas fa-pen-square"></i> Posts</a></li>
+            <li class="navbar-item"><a href="/projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li class="navbar-item"><a href="/research"><i class="fas fa-flask"></i> Research</a></li>
+            <li class="navbar-item"><a href="/designs"><i class="fas fa-cogs"></i> Designs</a></li>
+            <li class="navbar-item"><a href="/cv"><i class="fas fa-file-alt"></i> CV</a></li>
+            <li class="navbar-item"><a href="https://twitter.com/alexharston" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+    </nav>
+
+</header>
+
+
 <body>
-    
-<section class="hero is-primary is-bold is-small">
-    <div class="hero-head">
-        <div class="container">
-            <h1 class="title">
-                <a href="/">
-                    <strong>harston.</strong>
-                </a>
-            </h1>
-            <h3 class="subtitle">
-                PhD Student at Imperial. ML and Neuroscience. I like making stuff.
-            </h3>
-        </div>
-    </div>
-    
-    <div class="hero-body">
-        <div class="container">
-            <ul class="level ">
-                <li class="navbar-item"><a href="/posts"><i class="fas fa-pen-square"></i> Posts</a></li>
+        
 
-                <li class="navbar-item"><a href="/projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+    {% block content %} 
+    {% endblock %}
 
-                <li class="navbar-item"><a href="/research"><i class="fas fa-flask"></i> Research</a></li>
-
-                <li class="navbar-item"><a href="/designs"><i class="fas fa-cogs"></i> Designs</a></li>
-
-                <li class="navbar-item"><a href="/cv"><i class="fas fa-file-alt"></i> CV</a></li>
-
-                <li class="navbar-item"><a href="https://twitter.com/alexharston" target="_blank"><i class="fab fa-twitter"></i></a></li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-{% block content %} 
-{% endblock %}
-
-</body>
+    </body>
 </html>
