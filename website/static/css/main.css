@@ -6592,4 +6592,9 @@ label.panel-block {
   display: grid;
   grid-template-columns: 1fr; }
 
+nav h1, nav h2, nav h3 {
+  display: inline-block; }
+nav ul li {
+  display: inline-block; }
+
 /*# sourceMappingURL=main.css.map */

@@ -1,10 +1,12 @@
-{% extends 'base.html' %}
+{% comment %} {% extends 'base.html' %} {% endcomment %}
 
 {% block title %}
 Research
 {% endblock %}
 
-{% block content %}
+
+{% block body %}
+
 <section class="section">
     <div class="container">
         <div>
@@ -21,5 +23,15 @@ Research
             </div> 
         {% endfor %}
     </div>
+
+    <div class="container">
+        {% for poster in posters %}
+            <div class="publication">
+                <span><h2 class="subtitle has-text-left is-size-5 has-text-weight-bold"> {{ poster.year }} </h2></span>
+                <h1 class="title is-size-3 has-text-left has-text-weight-bold"> <a href="{{ poster.link }}"> {{ poster.title }} </a> </h1>
+            </div> 
+        {% endfor %}
+    </div>
+
 </section>
 {% endblock %}
