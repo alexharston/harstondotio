@@ -6,31 +6,23 @@ Home
 
 {% block main %}
 
-    {% if post %}
-        {% include "post-snippet.html" %}
-    {% else %}
-        <p class="content">No posts yet!</p>
-    {% endif %}
+    {% include "post-snippet.html" %}
 
-    {% if project %}
-        {% include "project-snippet.html" %}
+    {% if projects %}
+        {% for project in  projects%}
+            {% include "project-snippet.html" %}
+        {% endfor %}
     {% else %}
         <p class="content">No projects yet!</p>
     {% endif %}
 
-    {% if paper %}
+    {% if papers %}
         {% include "research-snippet.html" %}
     {% else %}
         <p class="content">No research yet!</p>
     {% endif %}
 
-    {% if design %}
-        {% include "designs-snippet.html" %}
-    {% else %}
-        <p class="content">No designs yet!</p>
-    {% endif %}
-   
-    {% if design %}
+    {% if designs %}
         {% include "designs-snippet.html" %}
     {% else %}
         <p class="content">No designs yet!</p>
