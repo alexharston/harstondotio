@@ -4,33 +4,30 @@
 Home
 {% endblock %}
 
-{% block body %}
-    {% include "nav.html" %}
+{% block main %}
 
-    {% if posts %}
+
+    {% if post %}
         {% include "post_list.html" %}
     {% else %}
         <p class="content">No posts yet!</p>
-    {% endif %}
+    {% endif %}    
 
-    {% if projects %}
+    {% if project %}
         {% include "projects.html" %}
     {% else %}
         <p class="content">No projects yet!</p>
     {% endif %}
 
-    {% if research %}
+    {% if papers %}
         {% include "research.html" %}
     {% else %}
         <p class="content">No research yet!</p>
     {% endif %}
 
-
-    {% if designs %}
+    {% if design %}
         {% include "designs.html" %}
     {% else %}
         <p class="content">No designs yet!</p>
     {% endif %}
-
-    {% include "footer.html" %}
 {% endblock %}

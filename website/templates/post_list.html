@@ -8,13 +8,17 @@ Posts
 <section class="section">
     <h1 class="title has-text-centered">Posts</h1>
     <div class="content">
-        {% for post in posts %}
-            <div>
-                <h1>
-                    <a href="{% url 'post_detail' id=post.id %}">{{post.title}}</a>
-                </h1>
-                <p> {{ post.text|truncatewords:40 }} </p>
-            </div>
-        {% endfor %}
+        {% if posts %}
+            {% for post in posts %}
+                <div>
+                    <h1>
+                        <a href="{% url 'post_detail' id=post.id %}">{{post.title}}</a>
+                    </h1>
+                    <p> {{ post.text|truncatewords:40 }} </p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="content">No posts found!</p>
+        {% endif %}
     </div>
 </section>

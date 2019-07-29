@@ -1,8 +1,12 @@
+{% extends "base.html" %}
+
 {% block title %}
 Projects
 {% endblock %}
 
-    <section class="section">
+{% block main %}
+
+<section class="section">
     <h1 class="title has-text-centered">Projects</h1>
     <div class="grid-container">
         {% for project in projects %}
@@ -13,3 +17,4 @@ Projects
         {% endfor %}
     </div>
 </section>
+{% endblock %}
