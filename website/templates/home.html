@@ -5,27 +5,36 @@ Home
 {% endblock %}
 
 {% block main %}
+
     {% if post %}
-        {% include "post_list.html" %}
+        {% include "post-snippet.html" %}
     {% else %}
         <p class="content">No posts yet!</p>
-    {% endif %}    
+    {% endif %}
 
     {% if project %}
-        {% include "projects.html" %}
+        {% include "project-snippet.html" %}
     {% else %}
         <p class="content">No projects yet!</p>
     {% endif %}
 
     {% if paper %}
-        {% include "research.html" %}
+        {% include "research-snippet.html" %}
     {% else %}
         <p class="content">No research yet!</p>
     {% endif %}
 
     {% if design %}
-        {% include "designs.html" %}
+        {% include "designs-snippet.html" %}
     {% else %}
         <p class="content">No designs yet!</p>
     {% endif %}
+   
+    {% if design %}
+        {% include "designs-snippet.html" %}
+    {% else %}
+        <p class="content">No designs yet!</p>
+    {% endif %}
+   
+
 {% endblock %}

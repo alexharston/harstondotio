@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base.html'%}
 
 {% block title %}
 Posts
@@ -9,7 +9,6 @@ Posts
 <section class="section">
     <h1 class="title has-text-centered">Posts</h1>
     <div class="content">
-        {% if posts %}
             {% for post in posts %}
                 <div>
                     <h1>
@@ -18,9 +17,6 @@ Posts
                     <p> {{ post.text|truncatewords:40 }} </p>
                 </div>
             {% endfor %}
-        {% else %}
-            <p class="content">No posts found!</p>
-        {% endif %}
     </div>
 </section>
 {% endblock %}

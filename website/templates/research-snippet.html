@@ -1,0 +1,25 @@
+<div class="container">
+    <div>
+        <h1 class="title has-text-centered">Research</h1>
+    </div>
+</div>
+<div class="container">
+    {% for paper in papers %}
+        <div class="publication">
+            <span><h2 class="subtitle has-text-left is-size-5 has-text-weight-bold"> {{ paper.year }} </h2></span>
+            <h1 class="title is-size-3 has-text-left has-text-weight-bold"> <a href="{{ paper.link }}"> {{ paper.title }} </a> </h1>
+            <h2 class="subtitle is-size-5 has-text-left has-text-weight-bold">{{ paper.authorlist }} </h2>
+            <h2 class="subtitle is-size-5 has-text-left has-text-weight-semibold">{{ paper.journal }}</h2>
+        </div> 
+    {% endfor %}
+</div>
+
+<div class="container">
+    {% for poster in posters %}
+        <div class="publication">
+            <span><h2 class="subtitle has-text-left is-size-5 has-text-weight-bold"> {{ poster.year }} </h2></span>
+            <h1 class="title is-size-3 has-text-left has-text-weight-bold"> <a href="{{ poster.link }}"> {{ poster.title }} </a> </h1>
+        </div> 
+    {% endfor %}
+</div>
+
