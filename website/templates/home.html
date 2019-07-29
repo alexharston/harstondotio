@@ -5,8 +5,6 @@ Home
 {% endblock %}
 
 {% block main %}
-
-
     {% if post %}
         {% include "post_list.html" %}
     {% else %}
@@ -19,7 +17,7 @@ Home
         <p class="content">No projects yet!</p>
     {% endif %}
 
-    {% if papers %}
+    {% if paper %}
         {% include "research.html" %}
     {% else %}
         <p class="content">No research yet!</p>
