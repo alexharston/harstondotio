@@ -6,3 +6,8 @@ db.sqlite3
 *.css
 *.css.map
 secrets.py
+deploy.py
+migrations
+*.sqlite3
+.vscode
+git 
