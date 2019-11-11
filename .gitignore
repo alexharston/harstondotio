@@ -3,3 +3,5 @@
 secrets.py
 deploy.py
 migrations
+*.sqlite3
+.vscode
