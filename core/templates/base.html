@@ -10,29 +10,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">    
         <link rel="icon" type="image/ico" href="/static/images/favicon.ico">
         <link rel="apple-touch-icon" type="image/png" href="/static/images/512ico.png" sizes="96x96">
-        <link rel="stylesheet" href="{% sass_src 'sass/main.sass' %}">
+        <link rel="stylesheet" href="{% sass_src 'sass/main.scss' %}">
     </head>
     <body>
-        <header>
-            <a href="/"><h1 class="title"><strong>harston.</strong></h1></a> 
-            <h3 class="subtitle">PhD Student at Imperial. ML and Neuroscience.</h3>
-        </header>
+       
+       {% include "nav.html" %}
 
-        <nav>
-            <ul>
-                <li><a href="/posts"><i class="fas fa-pen-square"></i> Posts</a></li>
-                <li><a href="/projects"><i class="fas fa-project-diagram"></i>Projects</a></li>
-                <li><a href="/research"><i class="fas fa-flask"></i> Research</a></li>
-                <li><a href="/cv"><i class="fas fa-file-alt"></i> CV</a></li>
-                <li><a href="https://twitter.com/alexharston" target="_blank"><i class="fab fa-twitter"></i></a></li>
-            </ul>
-        </nav>
-
-        <main>
         {% block main %}
         {% endblock %}
-        <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
-        </main>
 
         {% include "footer.html" %}
     </body>
