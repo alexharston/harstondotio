@@ -1,3 +1,9 @@
-django==2.0.12
 psycopg2==2.7.3.2
 gunicorn
+django-sass-processor
+rcssmin --install-option="--without-c-extensions"
+libsass
+django
+rjsmin
+django-compressor
+django-htmlmin

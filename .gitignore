@@ -10,4 +10,5 @@ deploy.py
 migrations
 *.sqlite3
 .vscode
-git 
+git
+server-scripts
