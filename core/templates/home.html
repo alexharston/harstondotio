@@ -9,27 +9,26 @@ Home
 
 
 
-<div class="links">
-    <a href="/"><h1 class="title"><strong>harston.</strong></h1></a> 
-    <h3 class="subtitle">PhD Student at Imperial. I work on machine learning and neuroscience.</h3>
-
+<section class="links">
+    <a href="/"><h1 class="title">harston.</h1></a> 
+    <h3 class="subtitle">PhD Student and Web Designer. I work on machine learning and neuroscience.</h3>
     
     <div class="nav-container">
-        <a href="" class="nav-item">
+        <a href="#about" class="nav-item">
             <div>
                 <img src="/static/images/about.svg" alt="">
                 <h3>About</h3>
             </div>
         </a>
     
-        <a class ="nav-item" href="">
+        <a href="#projects" class ="nav-item">
             <div>
                 <img src="/static/images/projects.svg" alt="">
                 <h3>Projects</h3>
             </div>
         </a>
         
-        <a href="" class ="nav-item">
+        <a href="#research" class ="nav-item">
             <div>
                 <img src="/static/images/research.svg" alt="">
                 <h3>Research</h3>
@@ -37,6 +36,33 @@ Home
         </a>
 
     </div>
-</div>
+</section>
+
+<a href="#about">
+    <div class="down-arrow">
+        <img src="/static/images/downarrow.svg" alt="">
+    </div>
+</a>
+
+<section class="about" id="about">
+    <div class="about-box">
+        <h2 class="about-title">about</h2>
+        {% include 'about.html' %}
+    </div>
+</section>
+
+<section class="projects" id="projects">
+    <div class="projects-box">
+        <h2 class="project-title">projects</h2>
+        {% include 'projects.html' %}    
+    </div>
+</section>
+
+<section class="research" id="research"> 
+    <div class="research-box">
+        <h2 class="research-title">research</h2>
+        {% include 'research.html' %}
+    </div>
+</section>
 
 {% endblock %}

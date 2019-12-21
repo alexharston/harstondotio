@@ -41,7 +41,18 @@ def post_edit(request, id):
     return render(request, 'post_edit.html', {'form': form})
 
 def home(request):
-    return render(request, 'home.html')
+    papers = Paper.objects.all()
+    projects = Project.objects.all()
+    posts = Post.objects.all().order_by('-published_date')
+    posters = Poster.objects.all()
+
+    context_dict = {
+        'papers': papers, 
+        'projects': projects, 
+        'posts': posts,
+        'posters': posters,
+    }
+    return render(request, 'home.html', context_dict)
 
 def post_list(request):
     posts = Post.objects.all().order_by('-published_date')

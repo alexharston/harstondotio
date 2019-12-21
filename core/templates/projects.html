@@ -1,19 +1,9 @@
-{% extends "base.html" %}
 
-{% block title %}
-Projects
-{% endblock %}
-
-{% block main %}
-<section class="section">
-    <h1 class="title has-text-centered">Projects</h1>
-    <div class="grid-container">
-        {% for project in projects %}
-            <div class="grid-item">
-                <h2 class="subtitle" href="{{project.link}}" target="_blank">{{project.title}}</h2>
-                <p class="content">{{project.text}}</p>
-            </div>
-        {% endfor %}
-    </div>
-</section>
-{% endblock %}
+<div class="project-container">
+    {% for project in projects %}
+        <div class="project-item">
+            <h2 class="subtitle" href="{{project.link}}" target="_blank">{{project.title}}</h2>
+            <p class="content">{{project.text}}</p>
+        </div>
+    {% endfor %}
+</div>
