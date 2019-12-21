@@ -121,7 +121,7 @@ a, p, b, h1, h2, h3, h4, h5 {
             font-family: 'Josefin Sans', 'Lato', sans-serif;
             color: darken(#664695, 30%);
             border-bottom: 12px solid #664695;
-            transform: skew(15deg, -15deg);
+            transform: skew(7deg, -7deg);
         }
         
         .project-container {
@@ -130,24 +130,32 @@ a, p, b, h1, h2, h3, h4, h5 {
             font-weight: 300;
             
             .project-item {
-                margin-bottom: 10px;
+                margin-bottom: 20px;
+                background-color: hsl(0, 5, 95);
+                border-radius: 5px;
+                padding: 10px 20px;
+                box-shadow: 0px -3px 2px rgba(255, 255, 255, 0.25), 0px 4px 4px rgba(143, 143, 143, 0.50);
                 h2 {
                     padding: 0;
                     margin: 0;
-                    color: darken(#664695, 30%);
                     font-size: 28px;
                     
                 }
                 
                 p {
                     padding: 0;
-                    font-size: 22px;
+                    font-size: 18px;
                     margin-top: 10px;
                     margin-bottom: 20px;
+                    font-weight: 300;
                 }
                 hr {
                     border: 0.1px solid #664695;
                 }
+            }
+
+            .project-item:hover {
+                border-left: 12px solid #664695;
             }
         }
     }
@@ -167,7 +175,7 @@ a, p, b, h1, h2, h3, h4, h5 {
         .research-title {
             font-size: 42px;
             font-family: 'Josefin Sans', 'Lato', sans-serif;
-            transform: skew(-15deg, 15deg);
+            transform: skew(-7deg, 7deg);
             border-bottom: 12px solid #00bebe;
         }
    
@@ -175,9 +183,40 @@ a, p, b, h1, h2, h3, h4, h5 {
         .research-container {
             display: grid;
             grid-template-columns: 1fr;
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
             
             .research-item {
-                margin-bottom: 40px;
+                border: 1px solid #c0c0c0;
+                border-radius: 15px;
+                padding: 15px 20px;
+                margin-bottom: 30px;
+                .year {
+                    font-size: 24px;
+                    font-weight: 600;
+                    margin-bottom: 7px;
+                }
+
+                .title {
+                    font-size: 24px;
+                    margin: 0;
+                }
+                
+                .authors {
+                    font-size: 18px;
+                    font-weight: 600;
+                    padding: 0;
+                    margin-top: 7px;
+                    margin-bottom: 7px;
+                }
+                
+                .journal {
+                    font-size: 16px;
+                    margin-top: 10px;
+                }
             }
         }
     }

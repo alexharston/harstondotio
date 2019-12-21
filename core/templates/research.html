@@ -1,18 +1,18 @@
 <div class="research-container">
     <h2>Papers</h2>
     {% for paper in papers %}
-        <div class="research-item">
-            <p class=""> {{ paper.year }} </p>
-            <p class=""> <a href="{{ paper.link }}"> {{ paper.title }} </a> </p>
-            <p class="">{{ paper.authorlist }} </p>
-            <p class="">{{ paper.journal }}</p>
-        </div> 
+        <a href="{{paper.link}}">
+            <div class="research-item">
+                <p class="title">{{ paper.title }}</p>
+                <p class="authors">{{ paper.authorlist }}</p>
+                <p class="journal">{{ paper.journal }} <b>{{paper.year}}</b></p>
+            </div> 
+        </a>    
     {% endfor %}
     <h2>Posters</h2>
     {% for poster in posters %}
         <div class="research-item">
-            <p class=""> {{ poster.year }} </p>
-            <p class=""> <a href="{{ poster.link }}"> {{ poster.title }} </a> </p>
+            <p class="title"> <a href="{{ poster.link }}"> {{ poster.title }} </a> </p>
         </div> 
     {% endfor %}
 </div>
