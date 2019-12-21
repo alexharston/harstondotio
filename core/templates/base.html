@@ -12,6 +12,7 @@
         <link rel="apple-touch-icon" type="image/png" href="/static/images/512ico.png" sizes="96x96">
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,700,900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="stylesheet" href="{% sass_src 'sass/main.scss' %}">
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154882724-1"></script>
@@ -31,5 +32,10 @@
         {% endblock %}
 
         {% include "footer.html" %}
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>

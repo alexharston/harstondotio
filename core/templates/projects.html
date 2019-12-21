@@ -1,9 +1,11 @@
 
-<div class="project-container">
+<div data-aos="fade-in" class="project-container">
     {% for project in projects %}
-        <div class="project-item">
-            <h2 class="subtitle" href="{{project.link}}" target="_blank">{{project.title}}</h2>
-            <p class="content">{{project.text}}</p>
-        </div>
+        <a href="{{project.link}}">
+            <div class="project-item">
+                <h2 class="subtitle" target="_blank">{{project.title}}</h2>
+                <p class="content">{{project.text}}</p>
+            </div>
+        </a>
     {% endfor %}
 </div>

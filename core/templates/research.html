@@ -1,4 +1,4 @@
-<div class="research-container">
+<div data-aos="fade-in" class="research-container">
     <h2>Papers</h2>
     {% for paper in papers %}
         <a href="{{paper.link}}">
@@ -13,6 +13,8 @@
     {% for poster in posters %}
         <div class="research-item">
             <p class="title"> <a href="{{ poster.link }}"> {{ poster.title }} </a> </p>
+            <p class="text">{{poster.text}}</p>
+            <p class="year">{{poster.published_year}}</p>
         </div> 
     {% endfor %}
 </div>
