@@ -5,7 +5,7 @@ html {
 body {
     width: 100%;
     margin: 0;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Lato', sans-serif;
     padding: 0;
     
 }
@@ -90,11 +90,15 @@ a, p, b, h1, h2, h3, h4, h5 {
         
         .about-title {
             font-size: 42px;
+            font-family: 'Josefin Sans', 'Lato', sans-serif;
+            border-bottom: 12px solid #00bebe;
+            transform: skew(-15deg, 15deg);
         }
         
         .about-text {
             max-width: 500px;
             line-height: 1.75;
+            font-weight: 300;
         }
     }
 }
@@ -111,17 +115,43 @@ a, p, b, h1, h2, h3, h4, h5 {
         align-items: center;
         grid-template-columns: 1fr;
         padding: 20px;
-
+        
         .project-title {
             font-size: 42px;
+            font-family: 'Josefin Sans', 'Lato', sans-serif;
+            color: darken(#664695, 30%);
+            border-bottom: 12px solid #664695;
+            transform: skew(15deg, -15deg);
         }
         
         .project-container {
             display: grid;
             grid-template-columns: 1fr;
+            font-weight: 300;
+            
+            .project-item {
+                margin-bottom: 10px;
+                h2 {
+                    padding: 0;
+                    margin: 0;
+                    color: darken(#664695, 30%);
+                    font-size: 28px;
+                    
+                }
+                
+                p {
+                    padding: 0;
+                    font-size: 22px;
+                    margin-top: 10px;
+                    margin-bottom: 20px;
+                }
+                hr {
+                    border: 0.1px solid #664695;
+                }
+            }
         }
     }
-
+    
 }
 
 .research {
@@ -136,12 +166,16 @@ a, p, b, h1, h2, h3, h4, h5 {
         
         .research-title {
             font-size: 42px;
+            font-family: 'Josefin Sans', 'Lato', sans-serif;
+            transform: skew(-15deg, 15deg);
+            border-bottom: 12px solid #00bebe;
         }
-    
+   
+        
         .research-container {
             display: grid;
             grid-template-columns: 1fr;
-
+            
             .research-item {
                 margin-bottom: 40px;
             }
