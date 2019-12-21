@@ -87,6 +87,7 @@ a, p, b, h1, h2, h3, h4, h5 {
         align-items: center;
         grid-template-columns: 1fr;
         padding: 20px;
+        margin: auto;
         
         .about-title {
             font-size: 42px;
@@ -115,6 +116,7 @@ a, p, b, h1, h2, h3, h4, h5 {
         align-items: center;
         grid-template-columns: 1fr;
         padding: 20px;
+        margin: auto;
         
         .project-title {
             font-size: 42px;
@@ -171,6 +173,7 @@ a, p, b, h1, h2, h3, h4, h5 {
         align-items: center;
         grid-template-columns: 1fr;
         padding: 20px;
+        margin: auto;
         
         .research-title {
             font-size: 42px;
@@ -228,7 +231,7 @@ a, p, b, h1, h2, h3, h4, h5 {
         
         .nav-container {
             grid-template-columns: 1fr 1fr 1fr;
-            margin-top: 60px;
+            margin-top: auto;
             
             .nav-item {
                 padding-top: none;
@@ -244,7 +247,7 @@ a, p, b, h1, h2, h3, h4, h5 {
         .about-box{
             grid-template-columns: 1fr 1fr;
             max-width: 1000px;
-            margin: 50px;
+
             .about-text {
                 font-size: 24px;
                 font-family: 'Lato';
@@ -256,7 +259,7 @@ a, p, b, h1, h2, h3, h4, h5 {
         .projects-box {
             grid-template-columns: 1fr 1fr;
             max-width: 1000px;
-            margin: 50px;
+
         }
 
     }
@@ -265,30 +268,32 @@ a, p, b, h1, h2, h3, h4, h5 {
         .research-box {
             grid-template-columns: 1fr 1fr;
             max-width: 1000px;
-            margin: 50px;
+
         }
     }
 }
 
 .down-arrow {    
-    // border: 2px solid white;
-    background-color: hsl(176, 80, 40);
-    border-radius: 10px;
-    width: 100px;
-    margin-top: -25px;
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
-    justify-content: center;
-    padding: 10px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
-
-    img {
-        width: 30px;
-        height: 30px;
-
+    justify-content: center ;
+    a {
+        .button {
+            background-color: hsl(176, 80, 40);
+            border-radius: 10px;
+            width: 100px;
+            margin-top: -25px;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
     }
+    // border: 2px solid white;
 }
 
 footer {
