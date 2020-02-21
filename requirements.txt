@@ -1,9 +1,6 @@
-psycopg2==2.7.3.2
-gunicorn
 django-sass-processor
+django==2.1.14
 rcssmin --install-option="--without-c-extensions"
 libsass
-django
-rjsmin
 django-compressor
 django-htmlmin

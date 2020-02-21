@@ -11,3 +11,4 @@ deploy.py
 .vscode
 git
 server-scripts
+env/
