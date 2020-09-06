@@ -29,12 +29,14 @@
                 <img class="logo" src="/static/images/logo.svg"> 
             </a>
         </div>
-        <div class="main-container">
-            {% include "nav.html" %}
-            <div class="main">
-                {% block main %}
-                {% endblock %}
-            </div>        
+        <div class="main-box">
+            <div class="main-container">
+                {% include "nav.html" %}
+                <div class="main">
+                    {% block main %}
+                    {% endblock %}
+                </div>        
+            </div>
         </div>
 
         {% include "footer.html" %}

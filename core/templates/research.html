@@ -7,7 +7,7 @@ Research
 {% block main %}
 <div>
     {%if papers %}
-    <h2>Papers</h2>
+    <h2 class="heading">Papers</h2>
         {% for paper in papers %}
             <a href="{{paper.link}}">
                 <div class="publication">
@@ -22,7 +22,7 @@ Research
         {% endfor %}
     {% endif %}
     {% if posters %}
-        <h2>Posters</h2>
+        <h2 class="heading">Posters</h2>
         {% for poster in posters %}
             <div class="publication">
                 <h2 class="title"> <a href="{{ poster.link }}"> {{ poster.title }} </a> </h2>

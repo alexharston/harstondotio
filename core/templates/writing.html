@@ -24,11 +24,13 @@ Writing and Reading
         {% if books %}
             <h2 class="heading">Reading</h2>
             {% for book in books%}
+            <a href="{{book.link}}">
                 <div class="book">
                 <label>{{book.date_added}}</label>
-                <a href="{{book.link}}"><h2>{{book.title}}</h2></a>  
+                <h2>{{book.title}}</h2>
                 <p>{{book.comment}}</p>
                 </div>
+            </a>
             {% endfor %}
         {% endif %}
     </div>

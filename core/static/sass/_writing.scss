@@ -3,31 +3,47 @@
     .heading {
         color: #6f32be;
         text-align: left;
-        font-weight: 500;
-        font-size: 18px;
+        // font-weight: 500;
+        // font-size: 18px;
     }
 }
 
 
 .post, .book {
-    margin-bottom: 35px;
+    margin: 0 0 50px 0;
     h2 {
-        font-size: 18px;
-        margin-top: 2px;
-        color: #5c516b;
+        font-size: 20px;
+        font-weight: 400;
+        margin: 2px 0 4px 0;
+        color: #6d6d91;
     }
     p {
-        font-size: 14px;
+        font-size: 16px;
+        line-height: 2;
+        color: #6d6d91;
     }
     label {
         color: #9b9b9b;
-        font-size: 12px;
+        // font-size: 12px;
     }
 }
 
 .post:last-child, .book:last-child {
-    margin-bottom: 80px;
+    // margin-bottom: 80px;
 }
+
+h1.title {
+    color: #6d6d91;
+    margin: 20px 0 5px 0;
+    text-align: left;
+}
+.full-content {
+    margin-top: 10px;
+    color: #6d6d91;
+    line-height: 2;
+    font-size: 16px;
+}
+
 @mixin writing--400() {
  }
  
