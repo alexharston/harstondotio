@@ -1,25 +1,18 @@
-{%extends 'base.html'%}
+{% extends "base.html" %}
 
 {% block title %}
 Designs
 {% endblock %}
 
 {% block main %}
-<section class="section">
-    <div class="container">
-        <div>
-            <h1 class="title has-text-centered">Designs</h1>
-        </div>
-    </div>
-    <div class="container">
+    {% if designs %}
+    <h2 class="title">Designs</h2>
         {% for design in designs %}
-            <div class="publication">
-                <span><h2 class="subtitle has-text-left is-size-5 has-text-weight-bold"> {{ paper.year }} </h2></span>
-                <h1 class="title is-size-3 has-text-left has-text-weight-bold"> <a href="{{ paper.link }}"> {{ paper.title }} </a> </h1>
-                <h2 class="subtitle is-size-5 has-text-left has-text-weight-bold">{{ paper.authorlist }} </h2>
-                <h2 class="subtitle is-size-5 has-text-left has-text-weight-semibold">{{ paper.journal }}</h2>
+            <div class="design">
+                <img src="{{design.image.url}}" alt="">
+                <h3>{{design.title}}</h3>
+                <p>{{design.text}}</p>
             </div> 
         {% endfor %}
-    </div>
-</section>
+    {% endif %}
 {% endblock %}

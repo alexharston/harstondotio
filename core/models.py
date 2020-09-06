@@ -9,13 +9,13 @@ class Post(models.Model):
     text = models.TextField()
     created_date = models.DateTimeField(auto_now_add=True)
     published_date = models.DateTimeField(blank=True, null=True)
-    slug = models.SlugField(unique=True, blank=True)
+    slug = models.SlugField()
 
     def __str__(self):
         return self.title
 
     def save(self, *args, **kwargs):
-        # self.published_date = timezone.now() 
+        self.published_date = timezone.now() 
         self.slug = slugify(self.title)
         super(Post, self).save(*args, **kwargs)
 
@@ -59,7 +59,6 @@ class Design(models.Model):
     
     title = models.CharField(max_length=200)
     text = models.TextField(blank=True)
-    published_year = models.DateField(blank=True, null=True)
     image = models.ImageField(blank=True)
     
     def __str__(self):
@@ -94,9 +93,9 @@ class Use(models.Model):
         ['Productivity', 'Productivity'],
         ['Equipment', 'Equipment'],
     ]
-    title = models.CharField(max_length=500)
+    title = models.TextField(max_length=500)
     description = models.TextField(default="")
-    category = models.TextField(default="", choices=CATEGORIES)
+    category = models.TextField(default="")
 
     def __str__(self):
         return self.title

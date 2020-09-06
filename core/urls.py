@@ -8,7 +8,7 @@ urlpatterns = [
     path('writing/<slug:slug>', views.post_detail),
     path('projects/', views.projects),
     path("research/", views.research),
-    path("design/", views.designs),
     path("uses/", views.uses),
     path("writing/", views.writing),
+    # path("designs/", views.designs),
 ]
