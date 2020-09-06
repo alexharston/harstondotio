@@ -1,0 +1,129 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+a, p, b, h1, h2, h3, h4, h5 {
+    padding: none;
+    margin: none;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    text-decoration: none;
+    color: black; 
+    a:visited {
+    text-decoration: none;
+    }
+}
+
+h2 {
+    font-weight: 300;
+}
+
+.logo-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    
+    nav {
+        font-size: 16px;
+        display: flex;
+        flex-direction: row;
+        padding: 20px 0;
+        justify-content: center;
+        
+        .nav-item {
+            padding: 0 5px;
+        }
+        .nav-item:active {
+            font-weight: 700;
+            }
+        
+        .nav-item:hover {
+            color: #380481;
+            font-weight: 500;
+        }
+    }
+    .intro {
+        max-width: 600px;
+        line-height: 1.5;
+        // word-spacing: 10%;
+        h2 {
+            font-size: 18px;
+            color: #5c516b;
+            a {
+            font-weight: 500;
+        }
+        a:hover {
+            font-weight: 600;
+           }
+        }
+    }
+}
+
+@mixin home--400() {
+    .main-container {
+        nav {
+            .nav-item {
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+@mixin home--500() {
+    
+}
+
+@mixin home--600() {
+    .main-container {
+        flex-direction: row;
+        padding: 20px 80px;
+
+        nav {
+            flex-direction: column;
+            .nav-item {
+                padding: 10px;
+            }
+        }
+    } 
+    
+}
+
+@mixin home--700() {
+    
+}
+
+@mixin home--800() {
+    
+}
+
+@mixin home--900() {
+}
+
+@mixin home--1000() {
+    
+}
+
+@mixin home--1100() {
+    
+}
+
+@mixin home--1200() {
+    
+}

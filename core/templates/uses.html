@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+Uses
+{% endblock %}
+
+{% block main %}
+    <div data-aos="fade-in" class="research-container">
+        <h2>Uses</h2>
+            {% for use in uses %}
+                <div class="use">
+                    <h3>{{use.title}}</h3>
+                    <p>{{use.description}}</p>
+                </div>
+            {% endfor %}
+    </div>
+{% endblock %}

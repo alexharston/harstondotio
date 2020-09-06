@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+Writing
+{% endblock %}
+
+{% block main %}
+    <div class="posts">
+        {% for post in posts %}
+            <div class="post">
+                <label>{{post.published_date}}</label>
+                <h2>{{post.title}}</h2>
+                <p>{{post.text}}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

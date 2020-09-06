@@ -1,4 +1,10 @@
+{% extends "base.html" %}
 
+{% block title %}
+Projects
+{% endblock %}
+
+{% block main %}
 <div data-aos="fade-in" class="project-container">
     {% for project in projects %}
         <a href="{{project.link}}">
@@ -9,3 +15,4 @@
         </a>
     {% endfor %}
 </div>
+{% endblock %}

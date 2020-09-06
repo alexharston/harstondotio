@@ -78,3 +78,11 @@ def readinglist(request):
 
 def cv(request):
     return render(request, 'cv.html')
+
+def uses(request):
+    uses = Use.objects.all()
+    return render(request, 'uses.html', {'uses': uses})
+
+def writing(request):
+    posts = Post.objects.all().order_by('-published_date')
+    return render(request, 'writing.html', {'posts': posts})

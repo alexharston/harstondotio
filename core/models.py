@@ -48,6 +48,7 @@ class Project(models.Model):
     image = models.ImageField(blank=True)
     link = models.URLField(default="")
 
+
     def __str__(self):
         return self.title
 
@@ -62,12 +63,36 @@ class Design(models.Model):
         return self.title
 
 
-class ReadPosts(models.Model):
+class ReadPost(models.Model):
 
     title = models.TextField(max_length=500)
     link = models.URLField(default="")
     comment = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
+class Book(models.Model):
+
+    title = models.TextField(max_length=500)
+    link = models.URLField(default="")
+    comment = models.TextField()
+    date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
+class Use(models.Model):
+
+    CATEGORIES= [
+        ['Development', 'Development'],
+        ['Productivity', 'Productivity'],
+        ['Equipment', 'Equipment'],
+    ]
+    title = models.TextField(max_length=500)
+    description = models.TextField(default="")
+    category = models.CharField(max_length=500, choices=CATEGORIES, default="")
 
     def __str__(self):
         return self.title
