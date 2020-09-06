@@ -54,6 +54,7 @@ h2 {
         // justify-content: center;
         
         .nav-item {
+            padding: 10px;
         }
         .nav-item:active {
             font-weight: 700;
@@ -65,7 +66,7 @@ h2 {
         }
     }
     .intro {
-        // max-width: 600px;
+        // max-width: 700px;
         line-height: 1.7;
         // word-spacing: 10%;
         h2 {
@@ -115,7 +116,7 @@ h2 {
     
     .main-container {
         display: grid;
-        grid-template-columns: 300px 1000px;
+        grid-template-columns: 300px 700px;
         // padding: 20px 80px;
         // max-width: 1200px;
     
