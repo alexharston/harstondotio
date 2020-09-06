@@ -54,7 +54,6 @@ h2 {
         // justify-content: center;
         
         .nav-item {
-            padding: 0 5px;
         }
         .nav-item:active {
             font-weight: 700;
@@ -66,8 +65,8 @@ h2 {
         }
     }
     .intro {
-        max-width: 600px;
-        line-height: 1.5;
+        // max-width: 600px;
+        line-height: 1.7;
         // word-spacing: 10%;
         h2 {
             font-size: 18px;
@@ -87,7 +86,7 @@ h2 {
     .main-container {
         nav {
             .nav-item {
-                padding: 0 20px;
+                // padding: 0 20px;
             }
         }
     }
@@ -116,9 +115,9 @@ h2 {
     
     .main-container {
         display: grid;
-        grid-template-columns: 300px 1fr;
+        grid-template-columns: 300px 1000px;
         // padding: 20px 80px;
-        max-width: 1200px;
+        // max-width: 1200px;
     
         nav {
             flex-direction: column;
