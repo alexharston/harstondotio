@@ -1,25 +1,32 @@
 {% extends "base.html" %}
+
 {% block title %}
+Research
 {% endblock %}
+
 {% block main %}
-<div data-aos="fade-in" class="research-container">
+<div>
+    {%if papers %}
     <h2>Papers</h2>
-    {% for paper in papers %}
-        <a href="{{paper.link}}">
-            <div class="research-item">
-                <p class="title">{{ paper.title }}</p>
-                <p class="authors">{{ paper.authorlist }}</p>
-                <p class="journal">{{ paper.journal }} <b>{{paper.year}}</b></p>
+        {% for paper in papers %}
+            <a href="{{paper.link}}">
+                <div class="publication">
+                    <p class="title">{{ paper.title }}</p>
+                    <p class="authors">{{ paper.authorlist }}</p>
+                    <label>{{paper.year}}</label>
+                    <p class="journal">{{ paper.journal }}</p>
+                </div> 
+            </a>    
+        {% endfor %}
+    {% endif %}
+    {% if posters %}
+        <h2>Posters</h2>
+        {% for poster in posters %}
+            <div class="publication">
+                <p class="title"> <a href="{{ poster.link }}"> {{ poster.title }} </a> </p>
+                <label>{{poster.published_year}}</label>
             </div> 
-        </a>    
-    {% endfor %}
-    <h2>Posters</h2>
-    {% for poster in posters %}
-        <div class="research-item">
-            <p class="title"> <a href="{{ poster.link }}"> {{ poster.title }} </a> </p>
-            <p class="text">{{poster.text}}</p>
-            <p class="year">{{poster.published_year}}</p>
-        </div> 
-    {% endfor %}
+        {% endfor %}
+    {% endif %}
 </div>
 {% endblock %}

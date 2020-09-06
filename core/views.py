@@ -74,7 +74,7 @@ def designs(request):
     return render(request, 'designs.html', {'designs': designs})
 
 def readinglist(request):
-    readinglist = ReadPosts.objects.all().order_by('-date_added')
+    readinglist = ReadPost.objects.all().order_by('-date_added')
 
 def cv(request):
     return render(request, 'cv.html')
@@ -85,4 +85,5 @@ def uses(request):
 
 def writing(request):
     posts = Post.objects.all().order_by('-published_date')
-    return render(request, 'writing.html', {'posts': posts})
+    books = Book.objects.all().order_by('-date_added')
+    return render(request, 'writing.html', {'posts': posts, 'books': books})

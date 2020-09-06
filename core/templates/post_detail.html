@@ -1,17 +1,12 @@
 {% extends 'base.html' %}
 
-{% block content %}
+{% block main %}
 <section class="section">
         <h1 class="title has-text-centered">{{ post.title }}</h1>
         {% if post.published_date %}
             <div class="container">
                 <p class="content has-text-centered">{{ post.published_date }}</p>
             </div>
-        {% endif %}
-        {% if user.is_authenticated %}
-            <a class="btn btn-default" href="{% url 'post_edit' id=post.id %}">
-                <span class="glyphicon glyphicon-pencil"></span>
-            </a>
         {% endif %}
         <p class="content">{{ post.text|linebreaksbr }}</p>
     </section>

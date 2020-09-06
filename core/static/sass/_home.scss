@@ -91,17 +91,6 @@ h2 {
 }
 
 @mixin home--600() {
-    .main-container {
-        flex-direction: row;
-        padding: 20px 80px;
-
-        nav {
-            flex-direction: column;
-            .nav-item {
-                padding: 10px;
-            }
-        }
-    } 
     
 }
 
@@ -118,6 +107,17 @@ h2 {
 
 @mixin home--1000() {
     
+    .main-container {
+        flex-direction: row;
+        padding: 20px 80px;
+    
+        nav {
+            flex-direction: column;
+            .nav-item {
+                padding: 10px;
+            }
+        }
+    } 
 }
 
 @mixin home--1100() {

@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.utils.text import slugify
 
 class Post(models.Model):
 
@@ -8,13 +9,15 @@ class Post(models.Model):
     text = models.TextField()
     created_date = models.DateTimeField(auto_now_add=True)
     published_date = models.DateTimeField(blank=True, null=True)
+    slug = models.SlugField(unique=True, blank=True)
 
     def __str__(self):
         return self.title
 
-    def publish(self):
-        self.published_date = timezone.now()
-        self.save()
+    def save(self, *args, **kwargs):
+        self.published_date = timezone.now() 
+        self.slug = slugify(self.title)
+        super(Post, self).save(*args, **kwargs)
 
 class Paper(models.Model):
 
@@ -75,8 +78,9 @@ class ReadPost(models.Model):
 
 class Book(models.Model):
 
-    title = models.TextField(max_length=500)
-    link = models.URLField(default="")
+    title = models.CharField(max_length=500)
+    author = models.CharField(max_length=300, default="")
+    link = models.URLField(default="", blank=True, null=True)
     comment = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
 
@@ -92,7 +96,7 @@ class Use(models.Model):
     ]
     title = models.TextField(max_length=500)
     description = models.TextField(default="")
-    category = models.CharField(max_length=500, choices=CATEGORIES, default="")
+    category = models.TextField(default="")
 
     def __str__(self):
         return self.title

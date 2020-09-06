@@ -1,17 +1,34 @@
 {% extends "base.html" %}
 
 {% block title %}
-Writing
+Writing and Reading
 {% endblock %}
 
 {% block main %}
+<div>
     <div class="posts">
-        {% for post in posts %}
-            <div class="post">
-                <label>{{post.published_date}}</label>
-                <h2>{{post.title}}</h2>
-                <p>{{post.text}}</p>
-            </div>
-        {% endfor %}
+        {% if posts %}
+            <h2 class="heading">Writing</h2>
+            {% for post in posts %}
+                <div class="post">
+                    <label>{{post.published_date}}</label>
+                    <h2>{{post.title}}</h2>
+                    <p>{{post.text}}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
     </div>
+    <div class="books">
+        {% if books %}
+            <h2 class="heading">Reading</h2>
+            {% for book in books%}
+                <div class="book">
+                <label>{{book.date_added}}</label>
+                <a href="{{book.link}}"><h2>{{book.title}}</h2></a>  
+                <p>{{book.comment}}</p>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
 {% endblock %}
