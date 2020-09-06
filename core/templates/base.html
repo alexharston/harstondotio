@@ -30,9 +30,11 @@
             </a>
         </div>
         <div class="main-container">
-        {% include "nav.html" %}        
-        {% block main %}
-        {% endblock %}
+            {% include "nav.html" %}
+            <div class="main">
+                {% block main %}
+                {% endblock %}
+            </div>        
         </div>
 
         {% include "footer.html" %}

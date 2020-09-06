@@ -108,8 +108,10 @@ h2 {
 @mixin home--1000() {
     
     .main-container {
-        flex-direction: row;
-        padding: 20px 80px;
+        display: grid;
+        grid-template-columns: 300px 1fr;
+        // padding: 20px 80px;
+        max-width: 1200px;
     
         nav {
             flex-direction: column;

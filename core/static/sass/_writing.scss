@@ -1,26 +1,33 @@
 .posts, .books {
+    margin-top: 20px;
     .heading {
-        color: #4786a3;
+        color: #6f32be;
         text-align: left;
-        font-weight: 600;
+        font-weight: 500;
+        font-size: 18px;
     }
 }
 
+
 .post, .book {
-    margin: 35px 0;
+    margin-bottom: 35px;
     h2 {
-        font-size: 20px;
+        font-size: 18px;
         margin-top: 2px;
+        color: #5c516b;
     }
     p {
         font-size: 14px;
-        color: #555555;
     }
     label {
         color: #9b9b9b;
+        font-size: 12px;
     }
 }
 
+.post:last-child, .book:last-child {
+    margin-bottom: 80px;
+}
 @mixin writing--400() {
  }
  
