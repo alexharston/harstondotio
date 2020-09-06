@@ -86,7 +86,7 @@ class Book(models.Model):
     title = models.CharField(max_length=500)
     author = models.CharField(max_length=300, default="")
     link = models.URLField(default="", blank=True, null=True)
-    comment = models.TextField()
+    comment = models.TextField(blank=True, null=True)
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

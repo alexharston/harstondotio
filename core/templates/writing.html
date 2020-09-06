@@ -8,7 +8,7 @@ Writing and Reading
 <div>
     <div class="posts">
         {% if posts %}
-            <h2 class="heading">Writing</h2>
+            <h2 class="heading">Things I've written</h2>
             {% for post in posts %}
                 <a href="/writing/{{post.slug}}">
                     <div class="post">
@@ -22,15 +22,29 @@ Writing and Reading
     </div>
     <div class="books">
         {% if books %}
-            <h2 class="heading">Reading</h2>
+            <h2 class="heading">Things I've read recently</h2>
             {% for book in books%}
-            <a href="{{book.link}}">
-                <div class="book">
-                <label>{{book.date_added}}</label>
-                <h2>{{book.title}}</h2>
-                <p>{{book.comment}}</p>
-                </div>
-            </a>
+                {% if book.link %}
+                <a href="{{book.link}}">
+                    <div class="book">
+                        <label>{{book.date_added}}</label>
+                        <h2>{{book.title}}</h2>
+                        <label>{{book.author}}</label>
+                        {% if book.comment %}
+                            <p>{{book.comment}}</p>
+                        {% endif %}
+                    </div>
+                </a>
+                {% else %}
+                    <div class="book">
+                        <label>{{book.date_added}}</label>
+                        <h2>{{book.title}}</h2>
+                        <label>{{book.author}}</label>
+                        {% if book.comment %}
+                            <p>{{book.comment}}</p>
+                        {% endif %}
+                    </div>
+                {% endif %}
             {% endfor %}
         {% endif %}
     </div>
