@@ -1,13 +1,16 @@
 {% extends 'base.html' %}
 
+{% block title %}
+{{post.title}}
+{% endblock %}
+
+
 {% block main %}
-<section>
-        <h1 class="title">{{ post.title }}</h1>
-        {% if post.published_date %}
-            <div class="container">
-                <label class="content">{{ post.published_date }}</label>
-            </div>
-        {% endif %}
-        <p class="full-content">{{ post.formatted_markdown|safe }}</p>
-    </section>
+    <h1 class="title">{{ post.title }}</h1>
+    {% if post.published_date %}
+        <div class="container">
+            <label class="content">{{ post.published_date }}</label>
+        </div>
+    {% endif %}
+    <p class="full-content">{{ post.formatted_markdown|safe}}</p>
 {% endblock %}
