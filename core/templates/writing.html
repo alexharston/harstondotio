@@ -14,7 +14,7 @@ Writing and Reading
                     <div class="post">
                         <label>{{post.published_date}}</label>
                         <h2>{{post.title}}</h2>
-                        <p>{{post.text|truncatewords:50}}</p>
+                        <p>{{post.formatted_markdown|safe|truncatewords:80}}</p>
                     </div>
                 </a>
             {% endfor %}

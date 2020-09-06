@@ -1,12 +1,14 @@
 from django.db import models
 from django.utils import timezone
 from django.utils.text import slugify
+from markdownx.models import MarkdownxField
+from markdownx.utils import markdownify
 
 class Post(models.Model):
 
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
-    text = models.TextField()
+    text = MarkdownxField()
     created_date = models.DateTimeField(auto_now_add=True)
     published_date = models.DateTimeField(blank=True, null=True)
     slug = models.SlugField()
@@ -14,8 +16,12 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+    @property
+    def formatted_markdown(self):
+        return markdownify(self.text)
+
     def save(self, *args, **kwargs):
-        self.published_date = timezone.now() 
+        # self.published_date = timezone.now() 
         self.slug = slugify(self.title)
         super(Post, self).save(*args, **kwargs)
 

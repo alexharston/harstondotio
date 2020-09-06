@@ -1,6 +1,8 @@
 from django.contrib import admin
 from django.urls import path, include
 from core import views
+from django.conf.urls import url, include
+from markdownx import urls as markdownx
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -11,4 +13,7 @@ urlpatterns = [
     path("uses/", views.uses),
     path("writing/", views.writing),
     # path("designs/", views.designs),
+]
+urlpatterns += [
+    url(r'^markdownx/', include('markdownx.urls'))
 ]

@@ -8,6 +8,6 @@
                 <label class="content">{{ post.published_date }}</label>
             </div>
         {% endif %}
-        <p class="full-content">{{ post.text|linebreaksbr }}</p>
+        <p class="full-content">{{ post.formatted_markdown|safe }}</p>
     </section>
 {% endblock %}
