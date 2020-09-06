@@ -11,10 +11,12 @@ Research
         {% for paper in papers %}
             <a href="{{paper.link}}">
                 <div class="publication">
-                    <p class="title">{{ paper.title }}</p>
-                    <p class="authors">{{ paper.authorlist }}</p>
-                    <label>{{paper.year}}</label>
-                    <p class="journal">{{ paper.journal }}</p>
+                    <h2 class="title">{{ paper.title }}</h2>
+                    <div class="publication-info">
+                        <label>{{paper.year}}</label>
+                        <p class="journal">{{ paper.journal }}</p>
+                    </div>
+                        <p class="authors">{{ paper.authorlist }}</p>
                 </div> 
             </a>    
         {% endfor %}
@@ -23,7 +25,7 @@ Research
         <h2>Posters</h2>
         {% for poster in posters %}
             <div class="publication">
-                <p class="title"> <a href="{{ poster.link }}"> {{ poster.title }} </a> </p>
+                <h2 class="title"> <a href="{{ poster.link }}"> {{ poster.title }} </a> </h2>
                 <label>{{poster.published_year}}</label>
             </div> 
         {% endfor %}
