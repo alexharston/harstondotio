@@ -21,8 +21,9 @@ class Post(models.Model):
         return markdownify(self.text)
 
     def save(self, *args, **kwargs):
-        # self.published_date = timezone.now() 
-        self.slug = slugify(self.title)
+        # self.published_date = timezone.now()
+        if not self.slug:
+            self.slug = slugify(self.title)
         super(Post, self).save(*args, **kwargs)
 
 class Paper(models.Model):

@@ -28,8 +28,10 @@ Writing and Reading
                 <a href="{{book.link}}">
                     <div class="book">
                         <label>{{book.date_added}}</label>
-                        <h2>{{book.title}}</h2>
-                        <label>{{book.author}}</label>
+                        <div class="titleandauthor">
+                            <h2>{{book.title}}</h2>
+                            <label>{{book.author}}</label>
+                        </div>
                         {% if book.comment %}
                             <p>{{book.comment}}</p>
                         {% endif %}

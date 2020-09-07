@@ -3,6 +3,7 @@
     .heading {
         color: #6f32be;
         text-align: left;
+        margin-bottom: 20px;
         // font-weight: 500;
         // font-size: 18px;
     }
@@ -10,11 +11,11 @@
 
 
 .post, .book {
-    margin: 0 0 50px 0;
+    margin: 0 0 70px 0;
     h2 {
         font-size: 20px;
         font-weight: 400;
-        margin: 2px 0 4px 0;
+        margin: 2px 0 5px -1px;
         color: #6d6d91;
     }
     p {
@@ -24,7 +25,12 @@
     }
     label {
         color: #9b9b9b;
-        // font-size: 12px;
+        font-size: 14px;
+    }
+    .titleandauthor{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
     }
 }
 
@@ -46,30 +52,42 @@ h1.title {
 }
 
 @mixin writing--400() {
- }
- 
- @mixin writing--500() {
-     
- }
- 
- @mixin writing--600() {
-     
- }
- 
- @mixin writing--700() {
-     
- }
- 
- @mixin writing--800() {
-     
- }
- 
- @mixin writing--900() {
- }
- 
- @mixin writing--1000() {
-     
- }
+}
+
+@mixin writing--500() {
+    
+}
+
+@mixin writing--600() {
+    
+}
+
+@mixin writing--700() {
+    
+}
+
+@mixin writing--800() {
+    .post, .book {
+        .titleandauthor{
+            margin: 0 0 0 0px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-items: start;
+
+            h2 {
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+@mixin writing--900() {
+}
+
+@mixin writing--1000() {
+    
+}
  
  @mixin writing--1100() {
      
