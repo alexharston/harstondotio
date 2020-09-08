@@ -27,12 +27,15 @@ h1 {
 h2 {
     font-weight: 400;
 }
-
-.logo-container {
-    padding: 20px 30px;
+.logo-wrapper {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    .logo-container {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 30px;
+        justify-content: center;
+    }
 }
 
 .main-box {
@@ -72,6 +75,9 @@ h2 {
 }
 
 @mixin home--500() {
+   .logo-wrapper {
+        justify-content: start;
+   }  
 }
 
 @mixin home--600() {
@@ -93,7 +99,6 @@ h2 {
 }
 
 @mixin home--1100() {
-    
     .main-box {
         display: flex;
         justify-content: start;
