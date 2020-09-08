@@ -33,7 +33,7 @@ def projects(request):
     return render(request, 'projects.html', {'projects': projects})
 
 def research(request):
-    papers = Paper.objects.all()
+    papers = Paper.objects.all().order_by('-year')
     return render(request, 'research.html', {'papers': papers})
 
 def designs(request):
