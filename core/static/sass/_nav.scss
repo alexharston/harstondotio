@@ -44,6 +44,9 @@ nav {
 
 @mixin nav--1000() {
     nav {
+        flex-direction: column;
+        margin-top: 24px;
+
         a:nth-child(1) {
             padding-left: 10px;
         }

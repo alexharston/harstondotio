@@ -29,7 +29,7 @@ h2 {
 }
 
 .logo-container {
-    padding: 20px;
+    padding: 20px 30px;
     display: flex;
     justify-content: center;
 }
@@ -99,10 +99,6 @@ h2 {
         display: grid;
         grid-template-columns: 300px 700px;
     
-        nav {
-            flex-direction: column;
-            margin-top: 20px;
-        }
     } 
 }
 
