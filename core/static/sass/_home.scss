@@ -31,7 +31,7 @@ h2 {
 .logo-container {
     padding: 20px;
     display: flex;
-    justify-content: start;
+    justify-content: center;
 }
 
 .main-box {
@@ -46,25 +46,6 @@ h2 {
     align-items: start;
     padding: 20px 40px;
     
-    nav {
-        font-size: 16px;
-        display: flex;
-        flex-direction: row;
-        padding: 20px 0;
-        justify-content: center;
-        
-        .nav-item {
-            padding: 10px;
-        }
-        .nav-item:active {
-            font-weight: 700;
-            }
-        
-        .nav-item:hover {
-            color: #380481;
-            font-weight: 500;
-        }
-    }
     .intro {
         // max-width: 700px;
         line-height: 1.7;
@@ -84,17 +65,12 @@ h2 {
 }
 
 @mixin home--400() {
-    .main-container {
-        nav {
-            .nav-item {
-                // padding: 0 20px;
-            }
-        }
-    }
+  .logo-container {
+      justify-content: start;
+  }  
 }
 
 @mixin home--500() {
-    
 }
 
 @mixin home--600() {
@@ -122,14 +98,10 @@ h2 {
     .main-container {
         display: grid;
         grid-template-columns: 300px 700px;
-        // padding: 20px 80px;
-        // max-width: 1200px;
     
         nav {
             flex-direction: column;
-            .nav-item {
-                padding: 10px;
-            }
+            margin-top: 20px;
         }
     } 
 }

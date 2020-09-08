@@ -1,10 +1,26 @@
 nav {
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    a {
+        padding: 10px;
+    }
+    
+    a:nth-child(1) {
+        padding-left: 0;
+    }
+    
+    a:hover {
+        color: #380481;
+        font-weight: 500;
+    }
+    
     a:active{
         font-weight: 600;
     }
-}
-nav:first-child {
-    padding-left: 0;
+
 }
 
 @mixin nav--400() {
@@ -15,22 +31,23 @@ nav:first-child {
 }
 
 @mixin nav--600() {
-    
 }
 
 @mixin nav--700() {
-    
 }
 
 @mixin nav--800() {
-    
 }
 
 @mixin nav--900() {
 }
 
 @mixin nav--1000() {
-    
+    nav {
+        a:nth-child(1) {
+            padding-left: 10px;
+        }
+    }
 }
 
 @mixin nav--1100() {
