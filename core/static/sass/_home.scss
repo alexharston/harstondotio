@@ -32,6 +32,7 @@ h2 {
     padding: 20px 30px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 .main-box {
@@ -89,6 +90,10 @@ h2 {
 }
 
 @mixin home--1000() {
+}
+
+@mixin home--1100() {
+    
     .main-box {
         display: flex;
         justify-content: start;
@@ -100,10 +105,6 @@ h2 {
         grid-template-columns: 300px 700px;
     
     } 
-}
-
-@mixin home--1100() {
-    
 }
 
 @mixin home--1200() {

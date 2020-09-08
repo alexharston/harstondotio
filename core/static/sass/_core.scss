@@ -57,6 +57,19 @@ h1, h2, h3, h4, nav {
     font-family: $logo-font;
 }
 
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding: 10px 0px 0px 63px;
+
+    img {
+        width: auto;
+        height: 25px;
+        padding: 0 5px;
+    }
+}
+
 @mixin core--400() {
     body {
         font-size: 12px;

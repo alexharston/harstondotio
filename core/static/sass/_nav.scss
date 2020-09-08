@@ -43,6 +43,9 @@ nav {
 }
 
 @mixin nav--1000() {
+}
+
+@mixin nav--1100() {
     nav {
         flex-direction: column;
         margin-top: 24px;
@@ -51,10 +54,6 @@ nav {
             padding-left: 10px;
         }
     }
-}
-
-@mixin nav--1100() {
-    
 }
 
 @mixin nav--1200() {
