@@ -1,12 +1,18 @@
 {% extends 'base.html'%}
 
-{% block content%}
+
+{% block title %}
+    Downloads
+{% endblock%}
+
+{% block main %}
     <div class="downloads">
         <h1>Downloads</h1>
         <div class="files">
             {% for file in files %}
                 <div class="file">
                     <a href="{{file.media.url}}"><h2>{{file.title}}</h2></a>
+                    <p>{{file.description}}</p>
                 </div>
             {% endfor %}
         </div>
