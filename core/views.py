@@ -52,7 +52,7 @@ def uses(request):
 
 def downloads(request):
     files = File.objects.all()
-    return render(request, 'download.html', {'files': files})
+    return render(request, 'downloads.html', {'files': files})
 
 def writing(request):
     posts = Post.objects.all().order_by('-published_date')

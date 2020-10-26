@@ -7,12 +7,12 @@
 
 {% block main %}
     <div class="downloads">
-        <h1>Downloads</h1>
         <div class="files">
             {% for file in files %}
                 <div class="file">
-                    <a href="{{file.media.url}}"><h2>{{file.title}}</h2></a>
+                    <a href="{{file.url}}"><h2>{{file.title}}</h2></a>
                     <p>{{file.description}}</p>
+                    <a href="{{file.url}}" download="{{file.file.url}}"><b>Download</b></a>
                 </div>
             {% endfor %}
         </div>

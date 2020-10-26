@@ -1,0 +1,58 @@
+h2, h3 {
+    // font-weight: 500;
+    // font-size: 20px;
+    // color: #6d6d91;
+}
+
+.heading {
+    color: #6f32be;
+}
+.files {
+    margin: 30px 0 50px 0;
+    h3 {
+        color: #6d6d91;
+        font-weight: 400;
+    }
+    p {
+        font-size: 16px;
+        color: #6d6d91;
+        margin-bottom: 0;
+    }
+
+    b {
+        font-weight: 600;
+    }
+}
+@mixin downloads--400() {
+ }
+ 
+ @mixin downloads--500() {
+     
+ }
+ 
+ @mixin downloads--600() {
+     
+ }
+ 
+ @mixin downloads--700() {
+     
+ }
+ 
+ @mixin downloads--800() {
+     
+ }
+ 
+ @mixin downloads--900() {
+ }
+ 
+ @mixin downloads--1000() {
+     
+ }
+ 
+ @mixin downloads--1100() {
+     
+ }
+ 
+ @mixin downloads--1200() {
+     
+ }

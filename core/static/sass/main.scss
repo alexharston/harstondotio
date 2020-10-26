@@ -33,6 +33,7 @@ $gray: #ddd;
 @import "research";
 @import "projects";
 @import "uses";
+@import "downloads";
 
 @media (min-width: 400px) {
     @include core--400();
@@ -42,6 +43,7 @@ $gray: #ddd;
     @include writing--400();
     @include projects--400();
     @include uses--400();
+    @include downloads--400();
 }
 
 @media (min-width: 500px) {
@@ -52,6 +54,7 @@ $gray: #ddd;
     @include writing--500();
     @include projects--500();
     @include uses--500();
+    @include downloads--500();
 }
 
 @media (min-width: 600px) {
@@ -62,6 +65,7 @@ $gray: #ddd;
     @include writing--600();
     @include projects--600();
     @include uses--600();
+    @include downloads--600();
 }
 
 @media (min-width: 700px) {
@@ -72,6 +76,7 @@ $gray: #ddd;
     @include writing--700();
     @include projects--700();
     @include uses--700();
+    @include downloads--700();
 }
 
 @media (min-width: 800px) {
@@ -82,6 +87,7 @@ $gray: #ddd;
     @include writing--800();
     @include projects--800();
     @include uses--800();
+    @include downloads--800();
 }
 
 @media (min-width: 900px) {
@@ -92,6 +98,7 @@ $gray: #ddd;
     @include writing--900();
     @include projects--900();
     @include uses--900();
+    @include downloads--900();
 }
 
 @media (min-width: 1000px) {
@@ -102,6 +109,7 @@ $gray: #ddd;
     @include writing--1000();
     @include projects--1000();
     @include uses--1000();
+    @include downloads--1000();
 }
 
 @media (min-width: 1100px) {
@@ -112,6 +120,7 @@ $gray: #ddd;
     @include writing--1100();
     @include projects--1100();
     @include uses--1100();
+    @include downloads--1100();
 }
 
 @media (min-width: 1200px) {
@@ -122,4 +131,5 @@ $gray: #ddd;
     @include writing--1200();
     @include projects--1200();
     @include uses--1200();
+    @include downloads--1200();
 }

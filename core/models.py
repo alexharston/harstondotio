@@ -42,7 +42,7 @@ class Paper(models.Model):
 class File(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
-    file = models.FileField()
+    uploadedfile = models.FileField()
 
 class Poster(models.Model):
 
