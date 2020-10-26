@@ -12,6 +12,7 @@ urlpatterns = [
     path("research/", views.research),
     path("uses/", views.uses),
     path("writing/", views.writing),
+    path("downloads/", views.downloads),
     # path("designs/", views.designs),
 ]
 urlpatterns += [

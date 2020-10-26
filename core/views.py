@@ -50,6 +50,10 @@ def uses(request):
     uses = Use.objects.all()
     return render(request, 'uses.html', {'uses': uses})
 
+def downloads(request):
+    files = File.objects.all()
+    return render(request, 'download.html', {'files': files})
+
 def writing(request):
     posts = Post.objects.all().order_by('-published_date')
     books = Book.objects.all().order_by('-date_added')

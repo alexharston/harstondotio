@@ -9,5 +9,6 @@ admin.site.register(Project)
 admin.site.register(Design)
 admin.site.register(Use)
 admin.site.register(Book)
+admin.site.register(File)
 
 

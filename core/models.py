@@ -39,6 +39,10 @@ class Paper(models.Model):
     def __str__(self):
         return self.title
 
+class File(models.Model):
+    title = models.CharField(max_length=200)
+    description = models.TextField(blank=True)
+    file = models.FileField()
 
 class Poster(models.Model):
 
