@@ -13,6 +13,7 @@ urlpatterns = [
     path("uses/", views.uses),
     path("writing/", views.writing),
     path("downloads/", views.downloads),
+    path("downloads/<slug:slug>", views.file),
     # path("designs/", views.designs),
 ]
 urlpatterns += [

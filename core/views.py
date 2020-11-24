@@ -54,6 +54,10 @@ def downloads(request):
     files = File.objects.all()
     return render(request, 'downloads.html', {'files': files})
 
+def file(request, slug):
+    file = get_object_or_404(File, slug=slug)
+    return render(request, 'file.html', {'file': file})
+
 def writing(request):
     posts = Post.objects.all().order_by('-published_date')
     books = Book.objects.all().order_by('-date_added')
