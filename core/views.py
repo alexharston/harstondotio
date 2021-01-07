@@ -1,9 +1,12 @@
 from django.shortcuts import render, get_object_or_404
 from django.shortcuts import redirect
+from django.conf import settings
 from django.contrib.auth.decorators import login_required
+from django.http import FileResponse, Http404, HttpResponse
 from django.utils import timezone
 from .models import *
 from .forms import PostForm
+import os
 
 
 def post_detail(request, slug):
@@ -44,15 +47,20 @@ def readinglist(request):
     readinglist = ReadPost.objects.all().order_by('-date_added')
 
 def cv(request):
-    return render(request, 'cv.html')
+    file_path = os.path.join(settings.SASS_PROCESSOR_ROOT, 'CV.pdf')
+    #with open (file_path, 'rb') as pdf:
+        #response = HttpResponse(pdf.read(), mimetype='application/pdf')
+        #response['Content-Disposition'] = 'inline;filename=CV.pdf'
+        #return response
+    try:
+        return FileResponse(open(file_path, 'rb'), content_type='application/pdf')
+    except FileNotFoundError:
+        raise Http404()
+
 
 def uses(request):
     uses = Use.objects.all()
     return render(request, 'uses.html', {'uses': uses})
-
-def downloads(request):
-    files = File.objects.all()
-    return render(request, 'downloads.html', {'files': files})
 
 def writing(request):
     posts = Post.objects.all().order_by('-published_date')

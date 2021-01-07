@@ -12,8 +12,7 @@ urlpatterns = [
     path("research/", views.research),
     path("uses/", views.uses),
     path("writing/", views.writing),
-    path("downloads/", views.downloads),
-    # path("designs/", views.designs),
+    path("cv/", views.cv),
 ]
 urlpatterns += [
     url(r'^markdownx/', include('markdownx.urls'))
