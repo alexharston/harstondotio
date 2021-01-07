@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{file.title}}
+{% endblock %}
+
+
+{% block main %}
+    {% if file %}
+        <div class="file">
+            <h1 class="title">{{ file.title }}</h1>
+            <p>{{file.description}}</p>
+            <a href="{{file.uploadedfile.url}}" download="{{file.uploadedfile.url}}"><b>Download</b></a>
+        </div>
+    {% endif %}
+{% endblock %}

@@ -13,6 +13,8 @@ urlpatterns = [
     path("uses/", views.uses),
     path("writing/", views.writing),
     path("cv/", views.cv),
+    path("downloads/", views.downloads),
+    path("downloads/<slug:slug>", views.file),
 ]
 urlpatterns += [
     url(r'^markdownx/', include('markdownx.urls'))
