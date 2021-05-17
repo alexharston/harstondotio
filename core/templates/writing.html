@@ -7,7 +7,7 @@ Writing and Reading
 {% block main %}
 <div>
     <div class="posts">
-        <h2 class="heading">Some things I've written</h2>
+        <h2 class="heading">Things I've written recently</h2>
         {% if posts %}
             {% for post in posts %}
                 <a href="/writing/{{post.slug}}">
@@ -21,7 +21,7 @@ Writing and Reading
         {% endif %}
     </div>
     <div class="books">
-        <h2 class="heading">Some things I've read</h2>
+        <h2 class="heading">Things I've read recently</h2>
         {% if books %}
             {% for book in books%}
                 {% if book.link %}
